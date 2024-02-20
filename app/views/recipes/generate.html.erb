@@ -1,0 +1,8 @@
+<%= form_tag generate_recipe_path, method: :post, id: "generate-recipe-form" do %>
+    <div class="form-group">
+      <%= label_tag :ingredients, "Enter your ingredients (separated by commas)" %>
+      <%= text_area_tag :ingredients, nil, class: "form-control" %>
+    </div>
+  
+    <%= button_tag "Generate Recipe", class: "btn btn-primary", type: "submit", id: "generate-recipe-button" %>
+  <% end %>  

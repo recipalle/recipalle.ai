@@ -1,0 +1,18 @@
+<!-- app/views/subscriptions/new.html.erb -->
+<h2>Subscribe</h2>
+
+<%= form_with url: subscriptions_path, id: 'payment-form', class: 'stripe-form' do |f| %>
+  <h3>Payment Information</h3>
+  <div class="field">
+    <label for="card-element">Credit or debit card</label>
+    <div id="card-element">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+    <!-- Used to display form errors. -->
+    <div id="card-errors" role="alert"></div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Subscribe", class: "btn btn-primary" %>
+  </div>
+<% end %>

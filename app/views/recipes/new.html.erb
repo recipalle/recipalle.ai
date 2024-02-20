@@ -1,0 +1,7 @@
+<%= form_with(url: generate_recipes_path, method: "post", local: true) do |form| %>
+    <div class="form-group">
+      <%= form.label :ingredients, "Enter ingredients (comma-separated):" %>
+      <%= form.text_field :ingredients, class: "form-control" %>
+    </div>
+    <%= form.submit "Generate Recipe", class: "btn btn-primary" %>
+  <% end %>  

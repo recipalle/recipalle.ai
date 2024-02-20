@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecipalleAi</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="stripe-public-key" content="<%= Rails.application.credentials.stripe[:publishable_key] %>">
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <%= javascript_include_tag 'stripe_elements' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
